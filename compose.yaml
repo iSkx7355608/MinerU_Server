@@ -1,0 +1,16 @@
+
+services:
+  mineru:
+    image: 'mineru_server:0.3.async'
+    ipc: host
+    ports:
+      - "8888:8000"
+    # volumes:
+    #     - ./app.py:/root/app.py
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0','1','2']
+            capabilities: [gpu]
