@@ -141,8 +141,7 @@ def pdf_parse_main(
         content_list = pipe.pipe_mk_uni_format(image_path_parent, drop_mode="none")
         md_content = pipe.pipe_mk_markdown(image_path_parent, drop_mode="none")
 
-        if is_json_md_dump:
-            json_md_dump(pipe, md_writer, pdf_name, content_list, md_content)
+        json_md_dump(pipe, md_writer, pdf_name, content_list, md_content)
         data = {"layout": copy.deepcopy(pipe.model_list), "info": pipe.pdf_mid_data, "content_list": content_list,'md_content':md_content}
         logger.info(f"{pdf_name} parsed")
         # logger.info(f"{data}")
