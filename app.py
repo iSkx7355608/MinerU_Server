@@ -79,7 +79,7 @@ def pdf_parse_main(
     :param pdf_file: The PDF file to be parsed
     :param parse_method: Parsing method, can be auto, ocr, or txt. Default is auto. If results are not satisfactory, try ocr
     :param model_json_path: Path to existing model data file. If empty, use built-in model. PDF and model_json must correspond
-    :param is_json_md_dump: Whether to write parsed data to .json and .md files. Default is True. Different stages of data will be written to different .json files (3 in total), md content will be saved to .md file
+    :param is_json_md_dump: Whether to transport parsed data to forend
     :param output_dir: Output directory for results. A folder named after the PDF file will be created to store all results
     """
     try:
